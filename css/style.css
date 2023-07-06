@@ -1,0 +1,740 @@
+/* Fuentes de Google */
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Inter:wght@300;700&family=Karla&display=swap");
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Selector universal */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Colores principales */
+
+:root {
+  --violeta: #8b48bf;
+  --celeste: #3cddf3;
+  --azul-grisaceo-oscuro: #1e1e26;
+  --azul-oscuro: #232851;
+  --gris-claro: #fafafa;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 56px;
+}
+
+.container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.header-logo-name {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--azul-oscuro);
+}
+
+.fa-bars {
+  font-size: 60px;
+  color: black;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* HEADER-DESKTOP-INVISIBLE */
+
+header nav a {
+  text-decoration: none;
+  color: var(--azul-oscuro);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+header nav ul li a {
+  position: relative;
+}
+
+header nav ul li a:hover {
+  opacity: 60%;
+}
+
+header nav ul li a::before {
+  content: "";
+  background-color: var(--violeta);
+  position: absolute;
+  bottom: -10px;
+  height: 0;
+  width: 100%;
+  transition: all 0.7s;
+}
+
+header nav ul li a:hover::before {
+  height: 7px;
+}
+
+header nav {
+  display: none;
+}
+
+.contacto-header {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* MAIN */
+
+/* seccion intro */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+  width: 85vw;
+  margin: 25px 7.5vw 50px;
+}
+
+.intro img {
+  width: 100%;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: right;
+  gap: 28px;
+}
+
+.intro-container h2 {
+  font-size: 45px;
+  font-weight: bold;
+  color: #232851;
+}
+
+.intro-container p {
+  font-size: 16.56px;
+  font-weight: 500;
+}
+
+.contenedor-contacto {
+  text-decoration: none;
+  color: white;
+  background-color: var(--violeta);
+  border-radius: 50px;
+  padding: 12px 40px;
+  font-size: 13.18px;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* seccion diferencia entre pros */
+
+.dif-between-pros {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-bottom: 75px;
+}
+
+.dif-between-pros-title {
+  background-color: var(--celeste);
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.dif-between-pros-title h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.dif-between-pros-title p {
+  font-weight: medium;
+}
+
+.dif-between-pros-list {
+  width: 90%;
+  align-self: end;
+}
+
+.dif-between-pros-list ol {
+  list-style-type: none;
+  counter-reset: item;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dif-between-pros-list li {
+  background-color: rgb(139, 72, 191, 0.3);
+  color: var(--azul-oscuro);
+  border-radius: 30px 0 0 30px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.dif-between-pros-list li::before {
+  counter-increment: item;
+  content: counter(item, decimal-leading-zero);
+  background-color: var(--violeta);
+  padding: 10px 25px;
+  margin-right: 15px;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.dif-between-pros-list div {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.dif-between-pros-list p {
+  margin: 10px;
+  color: #b3b2b7;
+  font-weight: medium;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* seccion best of the month(botm) */
+
+.botm {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botm h3 {
+  font-size: 39.21px;
+  font-weight: bold;
+  color: var(--azul-oscuro);
+  text-align: center;
+}
+
+.botm > div {
+  margin: 70px 0 60px;
+}
+
+.botm article {
+  width: 445px;
+  height: 254px;
+  margin: 0 17.5px;
+  position: relative;
+}
+
+.botm article img {
+  position: absolute;
+  left: 187px;
+  z-index: 1;
+}
+
+.info-botm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  position: absolute;
+  bottom: 0;
+  height: 219px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.info-botm h4 {
+  margin-top: 56px;
+  font-size: 16.07px;
+  font-weight: bold;
+}
+
+.info-botm p {
+  color: #b9b9c1;
+  font-weight: medium;
+  width: 403px;
+  margin: 0 21px;
+}
+
+.botm a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--violeta);
+  border-radius: 50px;
+  padding: 12px 40px;
+  font-size: 13.18px;
+  font-weight: medium;
+  width: 135px;
+  text-align: center;
+}
+
+.botm a:hover {
+  opacity: 70%;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* seccion best of the month(botm) DESKTOP */
+
+.botm-desktop {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* seccion best teams of the year(btoty) */
+
+.btoty {
+  background-color: var(--celeste);
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.btoty h3 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  width: 324px;
+  text-align: center;
+}
+
+.btoty div {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.btoty a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--azul-oscuro);
+  border-radius: 50px;
+  padding: 12px 40px;
+  font-size: 13.18px;
+  font-weight: medium;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+.fa-arrow-right,
+.fa-arrow-left {
+  font-size: 24px;
+  color: var(--azul-oscuro);
+  animation: grow-arrows 1s infinite alternate;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* FOOTER */
+
+footer > div {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  background-color: var(--azul-grisaceo-oscuro);
+}
+
+footer form {
+  display: flex;
+  gap: 9px;
+  margin: 10px 50px;
+}
+
+.mail {
+  padding: 12px 10px;
+  flex-grow: 1;
+  border-radius: 50px;
+  border-style: none;
+  font-size: 13.18px;
+}
+
+.boton-go {
+  text-decoration: none;
+  color: white;
+  background-color: var(--violeta);
+  border-radius: 50px;
+  padding: 11px 22px;
+  font-size: 13.18px;
+  font-weight: medium;
+  border-style: none;
+}
+
+.nav-footer {
+  padding: 10px;
+  margin: 0 68px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 140px;
+  width: 50vw;
+  max-width: 250px;
+  align-content: space-between;
+  gap: 20px;
+}
+
+.nav-footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+.nav-footer ul li a:hover {
+  color: var(--violeta);
+}
+
+.nav-redes {
+  margin: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-brands {
+  color: white;
+  font-size: 20px;
+}
+
+.footer-logo-name {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.copyright {
+  font-size: 12.5px;
+  text-align: center;
+  color: #8c8c94;
+  padding: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* FOOTER(desktop) */
+
+.footer-desktop {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* MEDIA QUERY */
+
+@media (min-width: 1440px) {
+  /* ------------------------------------------------------------------------------------------------ */
+
+  /* HEADER */
+
+  header {
+    padding: 65px 165px;
+  }
+
+  header nav {
+    display: block;
+  }
+
+  .contacto-header {
+    display: block;
+  }
+
+  .contenedor-contacto {
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+  }
+
+  .contenedor-contacto:hover {
+    animation: change-opacity 0.5s infinite alternate;
+  }
+
+  .menu-hamburguesa {
+    display: none;
+  }
+
+  /* ------------------------------------------------------------------------------------------------ */
+
+  /* MAIN */
+
+  /* seccion intro */
+
+  .intro {
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    width: 75vw;
+    margin: 25px 12.5vw 50px;
+  }
+
+  .intro img {
+    width: 540px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------ */
+
+  /* seccion diferencia entre pros */
+
+  .dif-between-pros {
+    background-color: #f5f5f5;
+    padding-bottom: 40px;
+  }
+
+  .dif-between-pros-title {
+    background-color: var(--violeta);
+    padding: 40px 0;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .dif-between-pros-title h3 {
+    width: 33%;
+  }
+
+  .dif-between-pros-title p {
+    width: 33%;
+  }
+
+  .dif-between-pros-list {
+    max-width: 1150px;
+    align-self: center;
+  }
+
+  .dif-between-pros-list ol {
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dif-between-pros-list div {
+    width: 540px;
+    gap: 18px;
+  }
+
+  .dif-between-pros-list li {
+    background-color: #f5f5f5;
+  }
+
+  .dif-between-pros-list p {
+    margin-left: 90px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------ */
+
+  /* seccion best of the month(botm) */
+
+  .botm-desktop {
+    display: block;
+  }
+
+  .botm > div {
+    display: flex;
+  }
+
+  .botm article {
+    margin: 0;
+  }
+
+  .botm a:hover {
+    animation: grow-button 0.5s infinite alternate;
+  }
+
+  /* ------------------------------------------------------------------------------------------------ */
+
+  /* seccion best teams of the year(btoty) */
+
+  .btoty {
+    background-color: var(--violeta);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 225px 60px 150px;
+  }
+
+  .btoty h3 {
+    width: 420px;
+    text-align: left;
+  }
+
+  .fa-arrow-right,
+  .fa-arrow-left {
+    color: white;
+  }
+
+  .btoty a {
+    color: var(--violeta);
+    background-color: white;
+  }
+
+  /* ------------------------------------------------------------------------------------------------ */
+
+  /* FOOTER */
+
+  .footer-mobile {
+    display: none;
+  }
+
+  .footer-desktop {
+    display: flex;
+    flex-direction: row;
+    padding: 50px 175px 40px;
+  }
+
+  .logo-y-redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 20px;
+    width: 190px;
+  }
+
+  .logo-y-redes .container-logo {
+    padding: 0;
+  }
+
+  .nav-redes {
+    margin: 0;
+    gap: 13px;
+    align-items: end;
+  }
+
+  .nav-footer {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-footer ul {
+    width: 27vw;
+  }
+
+  .nav-footer ul li {
+    width: 160px;
+  }
+
+  .nav-footer ul li a {
+    transition: all 0.5s;
+  }
+
+  .nav-footer ul li a:hover {
+    font-size: 22px;
+  }
+
+  .form-y-copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 19vw;
+  }
+
+  footer form {
+    margin: 0;
+  }
+
+  .mail:focus:invalid {
+    outline: none;
+    border: 3px solid red;
+  }
+
+  .mail:focus:valid {
+    outline: none;
+    border: 3px solid green;
+  }
+
+  .boton-go:hover {
+    cursor: pointer;
+    animation: rotate 1s;
+  }
+
+  .fa-brands {
+    transition: all 0.5s;
+  }
+
+  .fa-brands:hover {
+    padding: 20px 5px;
+    background-color: var(--violeta);
+  }
+
+  .copyright {
+    padding: 0;
+    align-self: end;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* KEYFRAMES */
+
+@keyframes grow-arrows {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes change-opacity {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 70%;
+  }
+}
+
+@keyframes grow-button {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
